@@ -13,7 +13,7 @@ A Mario-themed web challenge that required bypassing client-side JavaScript, int
 
 The challenge page greeted us with a Mario-style scene — a character standing before a gate with an input field.
 
-![Challenge page]()
+![Challenge page](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/1.png?raw=true)
 
 Inspecting the page source revealed a suspicious JavaScript snippet tied to the form submission:
 
@@ -28,7 +28,7 @@ document.getElementById('key-form').onsubmit = function() {
 
 No matter what value we typed into the input, the JS would silently overwrite it with `WEAK_NON_KOOPA_KNOCK` before submission — a classic client-side bypass target.
 
-![Source JS code]()
+![Source JS code](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/2.png?raw=true)
 
 ---
 
@@ -36,7 +36,7 @@ No matter what value we typed into the input, the JS would silently overwrite it
 
 Submitting the form with the replaced value redirected us to `/kamel.html` — a dead end that confirmed the key was wrong.
 
-![kamel.html page]()
+![kamel.html page](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/3.png?raw=true)
 
 ---
 
@@ -51,7 +51,7 @@ check under_the_doormat! - Sincerely, your faithful servant, Kamek")
 
 The `Server` header was telling us to try `under_the_doormat` as the key value.
 
-![Burp Suite intercept]()
+![Burp Suite intercept](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/4.png?raw=true)
 
 ---
 
@@ -59,7 +59,7 @@ The `Server` header was telling us to try `under_the_doormat` as the key value.
 
 Since the JavaScript was replacing our input value, we bypassed it by modifying the request directly in Burp Suite, setting the key to `under_the_doormat`. This redirected us to `/bowsers_castle.html`.
 
-![bowsers_castle.html]()
+![bowsers_castle.html](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/5.png?raw=true)
 
 ---
 
@@ -82,7 +82,7 @@ Set-Cookie: hasAxe=false; Path=/
 
 The `hasAxe=false` cookie was the gatekeeper. In Mario lore, the axe is used to defeat Bowser — so setting it to `true` seemed like the right move.
 
-![Full response with cookies]()
+![Full response with cookies](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/6.png?raw=true)
 
 ---
 
@@ -97,7 +97,7 @@ fetch('/bowsers_castle.html').then(r => r.text()).then(console.log);
 
 The server trusted the client-side cookie — and returned the flag. 🏆
 
-![Flag]()
+![Flag](https://github.com/0273574/ctfs-writeups/blob/main/BrOWSER%20BOSS%20FIGHT/7.png?raw=true)
 
 ---
 
