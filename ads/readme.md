@@ -1,7 +1,7 @@
 # BSidesSF 2026 CTF - Ads
 
 **Category:** Forensics / Steganography  
-**Author:** kacper (mindcrafters.xyz/)[https://mindcrafters.xyz]
+**Author:** kacper 
 
 ---
 
