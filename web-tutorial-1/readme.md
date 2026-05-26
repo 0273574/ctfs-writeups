@@ -4,7 +4,7 @@ Can you use XSS to steal the flag from the admin?
 
 Flag Path:`/xss-one-flag`
 
-![xss-site]()
+![xss-site](https://github.com/0273574/ctfs-writeups/blob/main/web-tutorial-1/xss.png?raw=true)
 
 ### Actually there was hints like:
 **Hint1:**
