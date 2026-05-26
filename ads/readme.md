@@ -44,7 +44,7 @@ Opening the first frame revealed the flag:
 open hidden_frames/frame_0001.png
 ```
 
-![Flag frame]()
+![Flag frame](https://github.com/0273574/ctfs-writeups/blob/main/ads/ads.png?raw=true)
 
 ---
 
