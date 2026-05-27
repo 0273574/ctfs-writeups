@@ -23,4 +23,4 @@ The challenge provided a `.txt` file containing a binary string grouped into spa
 Binary → Octal → Hex → Base32 → Base64 → FLAG
 ```
 
-![Screen from cyberchef](https://github.com/0273574/ctfs-writeups/blob/main/Bileciki%20do%20kontroli/Screenshot_2026-05-26_at_11.39.41.png?raw=true)
+![Screen from cyberchef](https://github.com/0273574/ctfs-writeups/blob/main/All%20about%20that%20base/Its%20all%20about%20that%20base.png?raw=true)
